@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS 3 Transitions</title>
+    <style>
+        body{
+            font-family: "Comic Sans MS",sans-serif;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+            background-color: forestgreen;
+
+        }
+        #t_width {
+            transition: width 2s;
+        }
+        #t_width:hover{
+            width: 200px;
+        }
+        #t_height {
+           transition: height 2s;
+        }
+        #t_height:hover{
+            height: 200px;
+        }
+        #t_both{
+            transition:all 2s;/*width 2s,height 2s;*/
+        }
+        #t_both:hover{
+            width: 200px;
+            height: 200px;
+        }
+        #t_rotate {
+             transition: all 2s;
+        }
+        #t_rotate:hover{
+            transform: rotate(180deg);
+            width: 200px;
+        }
+        #t_timing{
+            transition: all 2s;
+            margin-bottom: 200px;
+            transition-timing-function: ease-in-out;
+            /*transition-delay: 2s;*/
+        }
+        #t_timing:hover {
+            width: 400px;
+        }
+        #zoom {
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            overflow: hidden;
+
+        }
+        #zoom:hover img {
+          transform: scale(1.2,1.2);
+            cursor: pointer;
+        }
+        #zoom img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: all 2s;
+        }
+    </style>
+</head>
+<body>
+<!--Transition width-->
+<p>transition width</p>
+<div id="t_width"></div>
+<!--transition height-->
+<p>transition height</p>
+<div id="t_height"></div>
+<!--transition both-->
+<p>transition both</p>
+<div id="t_both">
+</div>
+<!--transition rotate-->
+<p>transition rotate</p>
+<div id="t_rotate"></div>
+<!--transition timing-->
+<p>transition timing</p>
+<div id="t_timing"></div>
+<!--Zoom effecct-->
+<p>Zoom</p>
+<div id="zoom">
+    <img src="img/gallery2.jpeg">
+</div>
+</body>
+</html>
